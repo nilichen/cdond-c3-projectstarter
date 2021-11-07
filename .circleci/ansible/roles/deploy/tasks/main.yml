@@ -1,7 +1,13 @@
+- name: Create a directory if it does not exist
+  ansible.builtin.file:
+    path: /home/ubuntu/backend
+    state: directory
+    mode: "0755"
+
 - name: Extract the zipped artifact into the EC2 instance
   ansible.builtin.unarchive:
-    src: artifact.tar.gz
-    dest: /home/ubuntu/
+    src: ../../artifact.tar.gz
+    dest: /home/ubuntu/backend
 
 - name: Start the app
   ansible.builtin.shell: |
