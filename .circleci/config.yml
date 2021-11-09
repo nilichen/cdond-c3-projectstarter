@@ -225,15 +225,19 @@ jobs:
             . ~/.nvm/nvm.sh
             nvm install v13.8.0
       - run:
-          name: Deploy frontend objects
-          working_directory: ./frontend
+          name: Get backend url
           command: |
             export BACKEND_IP=$(aws ec2 describe-instances \
               --query 'Reservations[*].Instances[*].PublicIpAddress' \
               --filters "Name=tag:project,Values=udapeople-backend-${CIRCLE_WORKFLOW_ID:0:7}" \
               --output text)
             export API_URL="http://${BACKEND_IP}:3030"
-            echo "API_URL=${API_URL}"
+            echo API_URL="http://${BACKEND_IP}:3030" >> frontend/.env
+            cat frontend/.env
+      - run:
+          name: Deploy frontend objects
+          command: |
+            cd frontend
             . ~/.nvm/nvm.sh
             npm install
             npm run build
