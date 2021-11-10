@@ -1,5 +1,5 @@
 - Public Url to GitHub repository (not private) [URL01]: https://github.com/nilichen/cdond-c3-projectstarter/tree/kni_dev
-- Public URL for your S3 Bucket (aka, your green candidate front-end) [URL02]: http://udapeople-f1e28b7.s3-website-us-east-1.amazonaws.com/#/employees
+- Public URL for your S3 Bucket (aka, your green candidate front-end) [URL02]: http://udapeople-8912a22.s3-website-us-east-1.amazonaws.com/#/employees
 - Public URL for your CloudFront distribution (aka, your blue production front-end) [URL03]: http://dfqwp9q5bsomr.cloudfront.net/#/employees
-- Public URLs to deployed application back-end in EC2 [URL04]: http://54.226.182.241:3030/api/status
+- Public URLs to deployed application back-end in EC2 [URL04]: http://54.152.197.138/:3030/api/status
 - Public URL to your Prometheus Server [URL05]: http://ec2-54-163-16-237.compute-1.amazonaws.com:9090/targets
